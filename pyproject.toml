@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "redis-mvp"
+version = "0.1.0"
+description = ""
+authors = ["Reverendheat <sharp.brandon@gmail.com>"]
+readme = "README.md"
+packages = [{include = "redis_mvp"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+redis-om = "^0.1.2"
+fastapi = "^0.94.1"
+uvicorn = {extras = ["standard"], version = "^0.21.1"}
+httpx = "^0.23.3"
+rq = "^1.13.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

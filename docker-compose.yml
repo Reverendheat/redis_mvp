@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  redis:
+    ports:
+      - 6379:6379
+      - 8001:8001
+    image: redis/redis-stack
+  api:
+    ports:
+      - 8000:8000
+    command: api
+    build:
+      context: "./"
+      dockerfile: "./redis_mvp/Dockerfile"
+    environment:
+      - REDIS_OM_URL=redis://redis:6379
+    env_file:
+      - ./.env
+    depends_on:
+      - worker
+  worker:
+    command: worker
+    build: 
+      context: "./"
+      dockerfile: "./redis_mvp/Dockerfile"
+    environment:
+      - REDIS_OM_URL=redis://redis:6379
+    env_file:
+      - ./.env
+    depends_on:
+      - redis
