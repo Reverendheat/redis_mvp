@@ -24,14 +24,14 @@ def fetch_comments():
 
 def update_comments():
     comments = fetch_comments()
-    for comments in comments:
+    for comment in comments:
         try:
-          existing_user = Comment.find(Comment.name == comments['name']).first()
-          existing_user.update(**comments)
+          existing_user = Comment.find(Comment.name == comment['name']).first()
+          existing_user.update(**comment)
           existing_user.expire(int(COMMENT_TTL))
         except NotFoundError:
-          u = Comment(**comments)
-          u.save()
-          u.expire(int(COMMENT_TTL))
+          co = Comment(**comment)
+          co.save()
+          co.expire(int(COMMENT_TTL))
 
 
