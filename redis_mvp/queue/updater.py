@@ -9,6 +9,7 @@ from redis_mvp.common.constants import COMMENT_TTL, COMMENT_BASE_URL
 class Comment(JsonModel):
     name: str = Field(index=True)
     postId: int = Field(index=True)
+    id: int = Field(index=True)
     email: str
     body: str
     last_seen: str
