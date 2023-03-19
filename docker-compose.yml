@@ -29,3 +29,10 @@ services:
       - ./.env
     depends_on:
       - redis
+  db_update:
+    build:
+      context: ./
+      dockerfile: "./redis_mvp/event/Dockerfile"
+    depends_on:
+      - api
+      - worker
