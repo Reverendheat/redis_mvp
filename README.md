@@ -2,6 +2,10 @@
 
 Example FastAPI application that uses with RQ for message queuing, and Redis_OM for object mapping.
 
+## Overview
+
+![Project Diagram](diagram.png)
+
 ## Requirements
 
 Docker - https://docs.docker.com/desktop/
