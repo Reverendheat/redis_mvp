@@ -1,6 +1,6 @@
 # Redis_OM / RQ / FastAPI
 
-Example FastAPI application that uses with RQ for message queuing, and Redis_OM for object mapping.
+Example FastAPI application that uses with RQ for message queuing, and Redis_OM for object mapping. This example uses [JSONPlaceholder's comments](https://jsonplaceholder.typicode.com/comments) as example data.
 
 ## Overview
 
@@ -9,7 +9,6 @@ Example FastAPI application that uses with RQ for message queuing, and Redis_OM 
 ## Requirements
 
 Docker - https://docs.docker.com/desktop/
-Poetry - https://python-poetry.org/docs/#installing-with-the-official-installer
 
 ## Running
 
