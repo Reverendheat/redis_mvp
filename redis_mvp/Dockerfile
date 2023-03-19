@@ -33,4 +33,4 @@ RUN poetry export --without-hashes -o requirements.txt \
   && pip install -t ${LOCAL_SITE_PACKAGES} -r requirements.txt
 WORKDIR /app
 COPY ./redis_mvp /app/redis_mvp
-ENTRYPOINT [ "python", "-u", "/app/redis_mvp/entrypoints/main.py" ]
+ENTRYPOINT [ "python", "-u", "/app/redis_mvp/entrypoint/main.py" ]
