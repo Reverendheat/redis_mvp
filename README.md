@@ -11,7 +11,7 @@ Poetry - https://python-poetry.org/docs/#installing-with-the-official-installer
 
     git clone this_repo
     cd this_repo
-    docker-compose up -d
+    docker-compose build && docker-compose up -d
 
 Re-fetch data
 
