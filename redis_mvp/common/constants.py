@@ -4,7 +4,7 @@ import os
 
 # FASTAPI
 SERVER_ADDRESS = os.getenv("SERVER_ADDRESS", "")
-SERVER_PORT = os.getenv("SERVER_PORT", 8000)
+SERVER_PORT = os.getenv("SERVER_PORT", 3000)
 
 # REDIS
 COMMENT_TTL = os.getenv("COMMENT_TTL", 3600)
